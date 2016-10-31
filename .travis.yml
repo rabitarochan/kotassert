@@ -5,3 +5,5 @@ language: kotlin
 jdk: oraclejdk8
 
 script: ./gradlew clean check
+
+after_success: bash <(curl -s https://codecov.io/bash)
