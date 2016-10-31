@@ -6,4 +6,6 @@ jdk: oraclejdk8
 
 script: ./gradlew clean check
 
-after_success: bash <(curl -s https://codecov.io/bash)
+before_install: pip install --user codecov
+
+after_success: codecov
