@@ -16,7 +16,7 @@ actual.Is(expected)
 actual.IsNot(expected)
 
 // assertThat(true, `is`(true))
-true.IsTrue()
+true.IsTrue(message = "assertion with message!")
 ```
 
 Since the assertion method returns the actual value, you can chain the assertion.
