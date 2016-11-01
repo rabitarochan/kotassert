@@ -1,7 +1,6 @@
 package kotassert.tests
 
-import kotassert.KotAssert
-import kotassert.Is
+import kotassert.*
 
 import org.junit.Test
 
