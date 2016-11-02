@@ -137,7 +137,7 @@ val x = C()
 // assertThat(x, `is`(instanceOf(A::class.java)))
 x.IsInstanceOf(A::class)
 
-// assertThat(x, `is`(not(instanceOf(A::class.java))))
+// assertThat(x, `is`(not(instanceOf(B::class.java))))
 x.IsNotInstanceOf(B::class)
 ```
 
@@ -173,7 +173,7 @@ val xs = arrayOf(1, 2, 3, 4, 5)
 // assertThat(xs, `is`(arrayContaining(1, 2, 3, 4, 5))) or assertThat(xs, `is`(contains(1, 2, 3, 4, 5)))
 xs.IsContains(1, 2, 3, 4, 5)
 
-// assertThat(xs, `is`(not(arrayContaining(1, 2, 3, 4, 5)))) or assertThat(xs, `is`(not(contains(1, 2, 3, 4, 5))))
+// assertThat(xs, `is`(not(arrayContaining(1, 2, 3, 4)))) or assertThat(xs, `is`(not(contains(1, 2, 3, 4))))
 xs.IsNotContains(1, 2, 3, 4)
 ```
 
@@ -182,10 +182,10 @@ xs.IsNotContains(1, 2, 3, 4)
 ```kotlin
 val xs = arrayOf(1, 2, 3, 4, 5)
 
-// assertThat(xs, `is`(arrayContainingInAnyOrder(1, 2, 3, 4, 5))) or assertThat(xs, `is`(containsInAnyOrder(1, 2, 3, 4, 5)))
+// assertThat(xs, `is`(arrayContainingInAnyOrder(4, 3, 5, 1, 2))) or assertThat(xs, `is`(containsInAnyOrder(4, 3, 5, 1, 2)))
 xs.IsContainsInAnyOrder(4, 3, 5, 1, 2)
 
-// assertThat(xs, `is`(not(arrayContainingInAnyOrder(1, 2, 3, 4, 5)))) or assertThat(xs, `is`(not(containsInAnyOrder(1, 2, 3, 4, 5))))
+// assertThat(xs, `is`(not(arrayContainingInAnyOrder(1, 2, 4, 5)))) or assertThat(xs, `is`(not(containsInAnyOrder(1, 2, 4, 5))))
 xs.IsNotContainsInAnyOrder(1, 2, 4, 5)
 ```
 
@@ -220,10 +220,10 @@ xs.HasNotItem(6)
 ```kotlin
 val xs = arrayOf(1, 2, 3, 4, 5) // or listOf(1, 2, 3, 4, 5)
 
-// assertThat(xs, hasItem(1))
+// assertThat(xs, hasItems(1, 3, 5))
 xs.HasItems(1, 3, 5)
 
-// assertThat(xs, not(hasItem(6)))
+// assertThat(xs, not(hasItems(0, 6)))
 xs.HasNotItems(0, 6)
 ```
 
