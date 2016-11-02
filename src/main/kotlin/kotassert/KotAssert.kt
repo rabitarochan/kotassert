@@ -325,13 +325,13 @@ fun <K, V> Map<K, V>.HasNotValue(value: V, message: String = ""): Map<K, V> {
 // property
 
 /** This same as : `assertThat(actual, samePropertyValuesAs(expected))` */
-fun <T> T.IsSamePropertiesAs(expected: T, message: String = ""): T {
+fun <T> T.IsSamePropertyValueAs(expected: T, message: String = ""): T {
     assertThat(message, this, samePropertyValuesAs(expected))
     return this
 }
 
 /** This same as : `assertThat(actual, not(samePropertyValuesAs(expected)))` */
-fun <T> T.IsNotSamePropertiesAs(expected: T, message: String = ""): T {
+fun <T> T.IsNotSamePropertyValueAs(expected: T, message: String = ""): T {
     assertThat(message, this, not(samePropertyValuesAs(expected)))
     return this
 }

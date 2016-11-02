@@ -292,10 +292,10 @@ val alice = Person(1, "alice")
 val bob = Person(2, "bob")
 
 // assertThat(alice, samePropertyValueAs(Person(1, "alice")))
-alice.IsSamePropertiesAs(Person(1, "alice"))
+alice.IsSamePropertyValueAs(Person(1, "alice"))
 
 // assertThat(alice, not(samePropertyValueAs(bob)))
-alice.IsNotSamePropertiesAs(bob)
+alice.IsNotSamePropertyValueAs(bob)
 ```
 
 ## Exception Assertion

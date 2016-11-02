@@ -1,8 +1,7 @@
 package kotassert.tests
 
 import org.junit.Test
-import kotassert.IsNotSamePropertiesAs
-import kotassert.IsSamePropertiesAs
+import kotassert.*
 
 class PropertyTest() {
 
@@ -16,8 +15,8 @@ class PropertyTest() {
         val dataClass1 = DataClass(1, "one")
         val dataClass2 = DataClass(2, "two")
 
-        dataClass1.IsSamePropertiesAs(DataClass(1, "one"))
-        dataClass1.IsNotSamePropertiesAs(dataClass2)
+        dataClass1.IsSamePropertyValueAs(DataClass(1, "one"))
+        dataClass1.IsNotSamePropertyValueAs(dataClass2)
 
     }
 
@@ -27,8 +26,8 @@ class PropertyTest() {
         val notmalClass1 = NormalClass(1, "one")
         val normalClass2 = NormalClass(2, "two")
 
-        notmalClass1.IsSamePropertiesAs(NormalClass(1, "one"))
-        notmalClass1.IsNotSamePropertiesAs(normalClass2)
+        notmalClass1.IsSamePropertyValueAs(NormalClass(1, "one"))
+        notmalClass1.IsNotSamePropertyValueAs(normalClass2)
 
     }
 
