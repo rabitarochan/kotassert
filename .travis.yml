@@ -4,8 +4,7 @@ language: kotlin
 
 jdk: oraclejdk8
 
-script: ./gradlew clean check
+script: ./gradlew clean check jacocoTestReport
 
-before_install: pip install --user codecov
-
-after_success: codecov
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
